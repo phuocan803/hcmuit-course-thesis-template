@@ -1,0 +1,140 @@
+%% uit-thesis.sty — UIT Thesis Style Package
+%% Khoa Mạng Máy Tính và Truyền Thông, Trường ĐH Công Nghệ Thông Tin
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{uit-thesis}[2026/03/01 UIT Thesis Style]
+
+% ==================== ENCODING AND FONT ====================
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T5]{fontenc}
+\RequirePackage[vietnamese]{babel}
+\RequirePackage{mathptmx}
+
+% ==================== PAGE LAYOUT ====================
+\RequirePackage[a4paper, top=2.5cm, bottom=2.5cm, left=3.5cm, right=2cm]{geometry}
+\RequirePackage{setspace}
+\onehalfspacing
+
+% ==================== PACKAGES ====================
+\RequirePackage{graphicx}
+\RequirePackage{tabularx}
+\RequirePackage{booktabs}
+\RequirePackage{longtable}
+\RequirePackage{multirow}
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+\RequirePackage{float}
+\RequirePackage{pdflscape}
+\RequirePackage{array}
+\RequirePackage{enumitem}
+\setlist[itemize]{label=--}
+\setlist[enumerate]{label=\arabic*.}
+
+% TikZ cho khung trang bìa
+\RequirePackage{tikz}
+\usetikzlibrary{calc}
+
+% Tiêu đề chương/mục
+\RequirePackage{titlesec}
+\RequirePackage[titles]{tocloft}
+
+% Fancyhdr cho header/footer
+\RequirePackage{fancyhdr}
+
+% Màu sắc
+\RequirePackage{xcolor}
+
+% Mã nguồn
+\RequirePackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{orange},
+  inputencoding=utf8,
+  extendedchars=true,
+}
+\renewcommand{\lstlistlistingname}{DANH MỤC MÃ NGUỒN}
+\renewcommand{\lstlistingname}{Mã nguồn}
+
+% Math
+\RequirePackage{amsmath,amsfonts,amssymb}
+
+% Hyperref (để cuối)
+\RequirePackage[colorlinks=true, linkcolor=black, citecolor=blue, urlcolor=blue]{hyperref}
+\RequirePackage{cleveref}
+
+% ==================== BIBLIOGRAPHY (biblatex) ====================
+\RequirePackage[autostyle=false, style=english]{csquotes}
+\RequirePackage[maxcitenames=2, mincitenames=1, backend=biber,
+  sorting=none, bibencoding=utf8, natbib=true, maxbibnames=99,
+  refsection=chapter, defernumbers=true]{biblatex}
+\DeclareLanguageMapping{vietnamese}{english}
+\DefineBibliographyStrings{vietnamese}{andothers={và các cộng sự}}
+
+% Heading cho bibliography cuối mỗi chương (cấp section, không đánh số)
+\defbibheading{chapterbib}[\bibname]{%
+  \section*{#1}%
+}
+
+% ==================== TÊN VIỆT HOÁ ====================
+\renewcommand{\chaptername}{Chương}
+\renewcommand{\appendixname}{Phụ lục}
+\renewcommand{\contentsname}{MỤC LỤC}
+\renewcommand{\listfigurename}{DANH MỤC HÌNH ẢNH}
+\renewcommand{\listtablename}{DANH MỤC BẢNG BIỂU}
+\renewcommand{\bibname}{DANH MỤC TÀI LIỆU THAM KHẢO}
+\AtBeginDocument{%
+  \captionsetup[figure]{name={Hình},labelsep=period}%
+  \captionsetup[table]{name={Bảng},labelsep=period}%
+}
+
+% ==================== TIÊU ĐỀ CHƯƠNG ====================
+\renewcommand\cftchappresnum{CHƯƠNG }
+\renewcommand\cftchapaftersnum{.}
+\newlength\mylen
+\settowidth\mylen{\bfseries\cftchappresnum\thechapter\ }
+\addtolength{\cftchapnumwidth}{\mylen}
+
+% Dấu chấm sau số section trong mục lục
+\renewcommand\cftsecaftersnum{.}
+\renewcommand\cftsubsecaftersnum{.}
+\renewcommand\cftsubsubsecaftersnum{.}
+
+\titleformat{\chapter}[display]
+  {\normalfont\large\bfseries}{CHƯƠNG~\thechapter.}{0pt}{\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
+
+% Các trang danh mục (chapter*): căn giữa
+\titleformat{name=\chapter,numberless}[block]
+  {\normalfont\large\bfseries\centering}{}{0pt}{\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
+
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries}
+
+% ==================== HEADER / FOOTER ====================
+\setlength\headheight{15.3pt}
+\fancypagestyle{customfancy}{
+  \fancyhf{}
+  \fancyhead[L]{\small\leftmark}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+
+% Pagestyle cho trang landscape phụ lục: chỉ có số trang, không có header
+\fancypagestyle{appendixlandscape}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% ==================== TOC DEPTH ====================
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}

@@ -1,0 +1,47 @@
+% ==================== TRANG BÌA ====================
+\begin{titlepage}
+\thispagestyle{empty}
+% Khung viền tikz chuẩn UIT
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[line width=1pt, color=blue!80!black]
+    ($(current page.north west) + (108pt,-65pt)$)
+    rectangle
+    ($(current page.south east) + (-56pt,56pt)$);
+\end{tikzpicture}
+
+\vspace*{0pt} % reset vertical position
+\begin{center}
+  {\large\bfseries ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\[3pt]
+  {\large\bfseries TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}\\[3pt]
+  {\normalsize\bfseries KHOA MẠNG MÁY TÍNH VÀ TRUYỀN THÔNG}\\[14pt]
+
+  % Logo UIT
+  \includegraphics[height=2.8cm]{img/logo/logo_uit_20-02.png}\hspace{0cm}%
+  \includegraphics[height=3cm]{img/logo/logo_faculty_basic_latex.png}\\[14pt]
+
+  {\large\bfseries BÁO CÁO ĐỒ ÁN CUỐI KỲ}\\[5pt]
+  {\normalsize\bfseries MÔN HỌC: HỆ TÍNH TOÁN PHÂN BỐ}\\[18pt]
+
+  {\normalsize\bfseries ĐỀ TÀI}\\[8pt]
+  {\large\bfseries TRIỂN KHAI CƠ CHẾ TỰ ĐỘNG MỞ RỘNG}\\[2pt]
+  {\large\bfseries THEO SỰ KIỆN CHO HỆ THỐNG MICROSERVICES}\\[2pt]
+  {\large\bfseries TRÊN NỀN TẢNG AMAZON EKS}\\[22pt]
+
+  % Thông tin GVHD và nhóm SV — dùng minipage căn giữa
+  \begin{minipage}{0.75\textwidth}
+    \raggedright
+    {\bfseries Giảng viên hướng dẫn:}\\[4pt]
+    \hspace{0.5cm}1.\enspace ThS. Nguyễn Văn X\\[2pt]
+    \hspace{0.5cm}2.\enspace ThS. Trần Thị Y\\[10pt]
+    {\bfseries Lớp:}\enspace NT533.Q21\\[10pt]
+    {\bfseries Nhóm sinh viên thực hiện:}\\[4pt]
+    \hspace{0.5cm}1.\enspace Nguyễn Văn A \textit{(Nhóm trưởng)} \hfill 22000001\\[2pt]
+    \hspace{0.5cm}2.\enspace Trần Thị B \hfill 22000002\\[2pt]
+    \hspace{0.5cm}3.\enspace Lê Văn C \hfill 22000003\\[2pt]
+    \hspace{0.5cm}4.\enspace Phạm Thị D \hfill 22000004
+  \end{minipage}
+
+  \vfill
+  {\bfseries TP. Hồ Chí Minh, ngày 1 tháng 3 năm 2026}
+\end{center}
+\end{titlepage}
