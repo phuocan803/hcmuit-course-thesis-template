@@ -10,6 +10,13 @@
     Faculty of Computer Networks and Communications.
   </p>
   <a href="#getting-started"><strong>Explore the docs »</strong></a>
+
+  <br/>
+  <br/>
+
+  ![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white)
+  ![License](https://img.shields.io/badge/License-Academic%20Use-blue?style=for-the-badge)
+  ![Platform](https://img.shields.io/badge/Overleaf-compatible-47A141?style=for-the-badge&logo=overleaf&logoColor=white)
 </div>
 
 ---
