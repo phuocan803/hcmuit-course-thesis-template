@@ -141,7 +141,7 @@ latexmk -c
 
 - Citations use **BibLaTeX + Biber** (not classic BibTeX).
 - Each chapter has its **own bibliography section** at the end, with citation numbers increasing continuously across the whole document (`[1]`, `[2]`, ...). This requires Biber to be run **twice** — see the compile instructions above.
-- Logo files must be placed in `img/logo/` matching the exact filenames referenced in `misc/cover.tex` (`logouit20-02.png` and `logoKhoa_Basic_latex.png`).
+- Logo files must be placed in `img/logo/` matching the exact filenames referenced in `misc/cover.tex` (`logo_uit_20-02.png` and `logo_faculty_basic_latex.png`).
 
 ---
 
