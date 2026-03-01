@@ -1,10 +1,17 @@
-[![HCMUIT Logo](img/logo/logo_uit_20-02.png)](#)
+<div align="center">
+  <a href="#">
+    <img src="img/logo/logo_uit_20-02.png" alt="HCMUIT Logo" width="300" />
+  </a>
 
-### HCMUIT Course Thesis Template
+  <h3>HCMUIT Course Thesis Template</h3>
 
-A free LaTeX template for end-of-semester course projects at UIT — Faculty of Computer Networks and Communications.  
-[**Explore the docs »**](#getting-started)  
-  
+  <p>
+    A free LaTeX template for end-of-semester course projects at UIT —<br/>
+    Faculty of Computer Networks and Communications.
+  </p>
+  <a href="#getting-started"><strong>Explore the docs »</strong></a>
+</div>
+
 ---
 
 ## About The Project
@@ -24,7 +31,44 @@ This template solves all of those problems. You only need to focus on the **cont
 ## Project Structure
 
 ```
-Template/├── main.tex                  ← Entry point — compile this file├── uit-thesis.sty            ← Style package (fonts, layout, packages)├── README.md│├── misc/                     ← Front / back matter pages│   ├── cover.tex             ← Title page│   ├── abstract.tex          ← Abstract│   ├── ack.tex               ← Acknowledgements│   ├── abbrev.tex            ← List of abbreviations│   └── council.tex           ← Defence committee info│├── chapters/                 ← Main chapter content│   ├── chapter1.tex          ← Chapter 1: Introduction│   ├── chapter2.tex          ← Chapter 2: Theoretical Background│   ├── chapter3.tex          ← Chapter 3: Methodology│   ├── chapter4.tex          ← Chapter 4: Implementation & Testing│   └── chapter5.tex          ← Chapter 5: Evaluation & Future Work│├── references/               ← Per-chapter bibliographies│   ├── chapter1/refs.bib│   ├── chapter2/refs.bib│   ├── chapter3/refs.bib│   ├── chapter4/refs.bib│   └── chapter5/refs.bib│├── appendix/                 ← Appendices│   ├── appendix_a.tex        ← Appendix A: Work assignment table│   ├── appendix_b.tex        ← Appendix B: Teamwork evidence│   └── appendix_c.tex        ← Appendix C: AI usage transparency│└── img/                      ← Images and figures    ├── logo/                 ← UIT and faculty logos    ├── chapter1/    ├── chapter2/    ├── chapter3/    ├── chapter4/    └── chapter5/
+Template/
+├── main.tex                  ← Entry point — compile this file
+├── uit-thesis.sty            ← Style package (fonts, layout, packages)
+├── README.md
+│
+├── misc/                     ← Front / back matter pages
+│   ├── cover.tex             ← Title page
+│   ├── abstract.tex          ← Abstract
+│   ├── ack.tex               ← Acknowledgements
+│   ├── abbrev.tex            ← List of abbreviations
+│   └── council.tex           ← Defence committee info
+│
+├── chapters/                 ← Main chapter content
+│   ├── chapter1.tex          ← Chapter 1: Introduction
+│   ├── chapter2.tex          ← Chapter 2: Theoretical Background
+│   ├── chapter3.tex          ← Chapter 3: Methodology
+│   ├── chapter4.tex          ← Chapter 4: Implementation & Testing
+│   └── chapter5.tex          ← Chapter 5: Evaluation & Future Work
+│
+├── references/               ← Per-chapter bibliographies
+│   ├── chapter1/refs.bib
+│   ├── chapter2/refs.bib
+│   ├── chapter3/refs.bib
+│   ├── chapter4/refs.bib
+│   └── chapter5/refs.bib
+│
+├── appendix/                 ← Appendices
+│   ├── appendix_a.tex        ← Appendix A: Work assignment table
+│   ├── appendix_b.tex        ← Appendix B: Teamwork evidence
+│   └── appendix_c.tex        ← Appendix C: AI usage transparency
+│
+└── img/                      ← Images and figures
+    ├── logo/                 ← UIT and faculty logos
+    ├── chapter1/
+    ├── chapter2/
+    ├── chapter3/
+    ├── chapter4/
+    └── chapter5/
 ```
 
 ---
@@ -33,21 +77,11 @@ Template/├── main.tex                  ← Entry point — compile this fi
 
 ### Requirements
 
-Component
-
-Software
-
-TeX distribution
-
-[TeX Live 2022+](https://www.tug.org/texlive/) or [MiKTeX](https://miktex.org/)
-
-Compiler
-
-pdfLaTeX or XeLaTeX
-
-Bibliography backend
-
-Biber
+| Component            | Software                                                                 |
+|----------------------|--------------------------------------------------------------------------|
+| TeX distribution     | [TeX Live 2022+](https://www.tug.org/texlive/) or [MiKTeX](https://miktex.org/) |
+| Compiler             | pdfLaTeX or XeLaTeX                                                      |
+| Bibliography backend | Biber                                                                    |
 
 ### Recommended Editors
 
@@ -66,7 +100,11 @@ latexmk -pdf -bibtex main
 Or manually (Biber must be run **twice** due to per-chapter bibliographies):
 
 ```bash
-pdflatex mainbiber    mainpdflatex mainbiber    mainpdflatex main
+pdflatex main
+biber     main
+pdflatex main
+biber     main
+pdflatex main
 ```
 
 Clean auxiliary files:
@@ -79,47 +117,14 @@ latexmk -c
 
 ## Workflow
 
-Step
-
-Task
-
-File
-
-1
-
-Edit group / supervisor info
-
-`misc/cover.tex`
-
-2
-
-Write chapter content
-
-`chapters/chapterN.tex`
-
-3
-
-Add references for each chapter
-
-`references/chapterN/refs.bib`
-
-4
-
-Place figures for each chapter
-
-`img/chapterN/`
-
-5
-
-Fill in the list of abbreviations
-
-`misc/abbrev.tex`
-
-6
-
-Write abstract and acknowledgements
-
-`misc/abstract.tex`, `misc/ack.tex`
+| Step | Task                              | File                                        |
+|------|-----------------------------------|---------------------------------------------|
+| 1    | Edit group / supervisor info      | `misc/cover.tex`                            |
+| 2    | Write chapter content             | `chapters/chapterN.tex`                     |
+| 3    | Add references for each chapter   | `references/chapterN/refs.bib`              |
+| 4    | Place figures for each chapter    | `img/chapterN/`                             |
+| 5    | Fill in the list of abbreviations | `misc/abbrev.tex`                           |
+| 6    | Write abstract and acknowledgements | `misc/abstract.tex`, `misc/ack.tex`       |
 
 > Search for the keyword **`TODO`** in any `.tex` file to find placeholders that need to be filled in.
 
