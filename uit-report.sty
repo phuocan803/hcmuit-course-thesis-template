@@ -1,7 +1,7 @@
-%% uit-thesis.sty — UIT Thesis Style Package
+%% uit-report.sty — UIT Course Report Style Package
 %% Khoa Mạng Máy Tính và Truyền Thông, Trường ĐH Công Nghệ Thông Tin
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{uit-thesis}[2026/03/01 UIT Thesis Style]
+\ProvidesPackage{uit-report}[2026/03/01 UIT Course Report Style]
 
 % ==================== ENCODING AND FONT ====================
 \RequirePackage[utf8]{inputenc}
@@ -84,10 +84,10 @@
 \renewcommand{\chaptername}{Chương}
 \renewcommand{\appendixname}{Phụ lục}
 \renewcommand{\contentsname}{MỤC LỤC}
-\renewcommand{\listfigurename}{DANH MỤC HÌNH ẢNH}
-\renewcommand{\listtablename}{DANH MỤC BẢNG BIỂU}
 \renewcommand{\bibname}{DANH MỤC TÀI LIỆU THAM KHẢO}
 \AtBeginDocument{%
+  \renewcommand{\listfigurename}{DANH MỤC HÌNH ẢNH}%
+  \renewcommand{\listtablename}{DANH MỤC BẢNG BIỂU}%
   \captionsetup[figure]{name={Hình},labelsep=period}%
   \captionsetup[table]{name={Bảng},labelsep=period}%
 }

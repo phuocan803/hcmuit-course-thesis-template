@@ -3,10 +3,10 @@
     <img src="img/logo/logo_uit_20-02.png" alt="HCMUIT Logo" width="300" />
   </a>
 
-  <h3>HCMUIT Course Thesis Template</h3>
+  <h3>HCMUIT Course Report Template</h3>
 
   <p>
-    A free LaTeX template for end-of-semester course projects at UIT —<br/>
+    A free LaTeX template for end-of-semester course reports at UIT —<br/>
     Faculty of Computer Networks and Communications.
   </p>
   <a href="#getting-started"><strong>Explore the docs »</strong></a>
@@ -23,7 +23,7 @@
 
 ## About The Project
 
-This is a free, non-profit LaTeX template built specifically for students of the **Faculty of Computer Networks and Communications** when completing their end-of-semester course projects.
+This is a free, non-profit LaTeX template built specifically for students of the **Faculty of Computer Networks and Communications** when completing their end-of-semester course reports.
 
 Writing a report that is correct, consistent, and well-formatted is a challenge — especially when working in a group with multiple people editing at the same time. Common problems when using Google Docs or Microsoft Word:
 
@@ -40,7 +40,7 @@ This template solves all of those problems. You only need to focus on the **cont
 ```
 Template/
 ├── main.tex                  ← Entry point — compile this file
-├── uit-thesis.sty            ← Style package (fonts, layout, packages)
+├── uit-report.sty            ← Style package (fonts, layout, packages)
 ├── README.md
 │
 ├── misc/                     ← Front / back matter pages
